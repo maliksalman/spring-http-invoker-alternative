@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: http-invoker-alternative-client
+service-urls:
+  widget: http://localhost:8080/widget
