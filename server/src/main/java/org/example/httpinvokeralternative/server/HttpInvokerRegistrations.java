@@ -9,10 +9,10 @@ import org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter;
 public class HttpInvokerRegistrations {
 
     @Bean(name = "/widget")
-    public HttpInvokerServiceExporter widgetServiceExporter() {
+    public HttpInvokerServiceExporter widgetServiceExporter(WidgetService svc) {
 
         HttpInvokerServiceExporter exporter = new HttpInvokerServiceExporter();
-        exporter.setService(new WidgetServiceImpl());
+        exporter.setService(svc);
         exporter.setServiceInterface(WidgetService.class);
         return exporter;
     }
