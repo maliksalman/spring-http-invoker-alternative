@@ -25,7 +25,7 @@ public class Application  {
         SpringApplication.run(Application.class, args);
     }
 
-    private WidgetService widgetService;
+    private final WidgetService widgetService;
 
     public Application(WidgetService widgetService) {
         this.widgetService = widgetService;

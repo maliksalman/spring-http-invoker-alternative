@@ -10,7 +10,6 @@ public class HttpInvokerRegistrations {
 
     @Bean(name = "/widget")
     public HttpInvokerServiceExporter widgetServiceExporter(WidgetService svc) {
-
         HttpInvokerServiceExporter exporter = new HttpInvokerServiceExporter();
         exporter.setService(svc);
         exporter.setServiceInterface(WidgetService.class);
